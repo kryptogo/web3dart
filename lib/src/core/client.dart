@@ -187,7 +187,7 @@ class Web3Client {
           (Decimal.fromBigInt(gasPrice) * Decimal.parse('1.1')).toBigInt();
     }
 
-    return EtherAmount.fromBigInt(EtherUnit.wei, hexToInt(data));
+    return EtherAmount.fromBigInt(EtherUnit.wei, gasPrice);
   }
 
   /// Returns the number of the most recent block on the chain.
