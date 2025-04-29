@@ -217,6 +217,7 @@ Future<EtherAmount> _getMaxFeePerGas(
   }
 
   return EtherAmount.inWei(
-    (baseFeePerGas.getInWei * BigInt.from(220) ~/ BigInt.from(100)) + maxPriorityFeePerGas,
+    (baseFeePerGas.getInWei * BigInt.from(245) ~/ BigInt.from(100)) +
+        maxPriorityFeePerGas,
   );
 }
