@@ -104,7 +104,7 @@ Uint8List signTransactionRaw(
   Transaction transaction,
   Credentials c, {
   int? chainId = 1,
-  }) {
+}) {
   if (transaction.isEIP1559 && chainId != null) {
     final encodedTx = LengthTrackingByteSink();
     encodedTx.addByte(0x02);
@@ -204,7 +204,7 @@ Future<EtherAmount> _getMaxPriorityFeePerGas() {
   return Future.value(EtherAmount.inWei(BigInt.from(1000000000)));
 }
 
-// Max Fee = (2.2 * Base Fee) + Max Priority Fee
+// Max Fee = (2.45 * Base Fee) + Max Priority Fee
 Future<EtherAmount> _getMaxFeePerGas(
   Web3Client client,
   BigInt maxPriorityFeePerGas,
